@@ -31,11 +31,9 @@
     <link rel="stylesheet" href="./assets/css/theme.bundle.css" />
 
     <!-- Fix for custom scrollbar if JS is disabled-->
-    <noscript>
+
         <style>
-          /**
-          * Reinstate scrolling for non-JS clients
-          */
+        
           .simplebar-content-wrapper {
             overflow: auto;
           }
@@ -44,14 +42,80 @@
   font-weight: 400;
   font-style: normal;
 }
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    overflow: hidden; /* Add overflow here */
+    font-family: 'Mr De Haviland', cursive;
+    font-size: 7em; color: white;  
+    font-style: normal;
+    
+}
+
+#preloader h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    animation: blink 1s infinite;
+}
+
+#preloader .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #333;
+    margin-top: 20px;
+    animation: moveCircle 1s infinite linear;
+}
+
+@keyframes blink {
+    0%, 49%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes moveCircle {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+        
+        </style>
 
         </style>
     </noscript>
 
     <!-- Page Title -->
-    <title>Bootstrap 5 HTML Template</title>
+    <title>Huzaifa Ramzan</title>
     
 </head>
+<div id="preloader">
+    <div class="text-container">
+        <h1>&lt;Huzaifa Ramzan /&gt;</h1>
+    </div>
+    <div class="circle"></div>
+</div>
 <body class="">
 
     <!-- Navbar -->
@@ -73,27 +137,26 @@
                 <i class="ri-menu-line"></i>
             </button>
             <!-- /Mobile Menu Btn-->
-    
-            <div class="collapse navbar-collapse justify-content-between align-items-center" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown position-static">
-                      
-                         
-                          
-                        </a>
-                        <!-- Features dropdown menu-->
-                        
-                        <!-- / Features dropdown menu-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto" style="margin-right: 20px;">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+                      <div class="d-none d-lg-flex">
                     
-                    <li class="nav-item">
-                        <a style="position: relative; left: 30px;" class="nav-link" href="./about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./contact.html " style="position: relative; left: 30px;">Contact</a>
-                    </li>
-                </ul>            <div class="d-none d-lg-flex">
-                    <a href="#" class="btn btn-link text-muted" role="button">Login</a>
-                    <a href="#" class="btn btn-primary ms-2" role="button">Get started</a>
                 </div>
             </div>
         </div>
@@ -117,8 +180,8 @@
                     
                     <ul class="list-unstyled d-none d-md-flex align-items-center small text-muted mt-3 pt-1 fw-medium fs-9 justify-content-center justify-content-lg-start">
                         <li class="me-4 d-flex align-items-center">
-                            <a href="your link here"> <i class="fa-brands fa-github fa-2xl" style="color: #74C0FC;"></i></a>
-                            <a style="left: 40px; position: relative;" href="your link here"> <i class="fa-brands fa-linkedin fa-2xl" style="color: #74C0FC;"></i></i></a>
+                            <a href="https://github.com/huzaifaramzan1" target="_blank"> <i class="fa-brands fa-github fa-2xl" style="color: #74C0FC;"></i></a>
+                            <a style="left: 40px; position: relative;" href="https://www.linkedin.com/in/muhammad-huzaifa-ba3160283/" target="_blank"> <i class="fa-brands fa-linkedin fa-2xl" style="color: #74C0FC;"></i></i></a>
                         </li>
                         
                     </ul>
@@ -127,10 +190,9 @@
 
                 <!-- Hero Graphic-->
                 <div class="col-12 col-lg-6 mt-5 mt-lg-0 align-self-stretch position-relative z-index-20" data-aos="fade-in">
-                    <img style="border-radius: 1000px; height: 100%; width: 100%; border-top: " src="/src/assets/images/WhatsApp Image 2024-02-23 at 12.27.31_69e016bf.jpg" alt="">
-                      
-                       
+                    <img style="border-radius: 10000px; border-top: 10px solid rgb(0, 171, 194); height: 100%; width: 100%; border-bottom: 10px solid rgb(234, 0, 255);   " src="/src/assets/images/WhatsApp Image 2024-02-23 at 12.27.31_69e016bf.jpg" alt="">
                 </div>
+                
                 <!-- / Hero Graphic-->
 
             </div>
@@ -287,6 +349,7 @@
         <!-- Logo Showcase-->
 
         <!-- Integrations-->
+        <section id="about">  
         <div class="bg-dark py-8" data-aos="fade-in">
             <div class="container py-4">
                 <p class="mb-0 text-center small fw-bolder tracking-wider text-uppercase text-orange"></p>
@@ -327,6 +390,7 @@
                     </div>
                     <!-- /Integration-->
                 </div>
+        </section>
 
               
 
@@ -335,6 +399,7 @@
         <!-- / Integrations-->
 
         <!-- Product Highlights-->
+        <section id="projects">  
         <div class="py-5 py-lg-10">
             <div class="bg-dark py-8" data-aos="fade-in">
                 <div class="container py-4">
@@ -455,6 +520,7 @@
             <!-- /Hightlight Two-->
 
         </div>
+        </section>
         <!-- /Product Highlights-->
 
         <!-- Customer Reviews-->
@@ -736,183 +802,35 @@
         <!-- /Customer Reviews-->
 
         <!-- Latest Blog Posts-->
-        <div class="bg-primary py-10 d-flex align-items-center justify-content-center">
+     
+        
+        <div class="bg-secondary py-10 d-flex align-items-center justify-content-center shadow-lg follow-me-card">
             <div class="container">
-                <h4 class="fs-1 fw-bold mb-6 text-white text-center">Follow me on Linkedin</h4>
-        
-                <div class="row g-5 justify-content-center">
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="d-flex h-100 bg-white rounded card shadow-lg hover-lift align-items-start justify-content-center" style="height: 250px;">
-                            <picture>
-                                <img class="img-fluid" src="./assets/images/blog-two.jpeg" alt="">
-                            </picture>
-        
-                            <div class="card-body p-4 p-lg-5 text-center">
-                                <p class="card-title fw-medium mb-4">How to use Agile to implement Scrum method</p>
-                                <a href="#" class="fw-medium fs-7 text-decoration-none link-cover">Read more &rarr;</a>
-                            </div>
-                        </div>
+              <h4 class="fs-1 fw-bold mb-6 text-white text-center">Follow me on Linkedin</h4>
+          
+              <div class="row g-5 justify-content-center">
+                <div class="col-12 col-sm-6 col-lg-4">
+                  <div class="d-flex h-100 bg-white rounded card shadow-lg hover-lift align-items-start justify-content-center" style="height: 250px;">
+                    <picture>
+                      <img class="img-fluid img-thumbnail" src="/src/assets/images/Screenshot 2024-02-23 192728.png" alt="">
+                    </picture>
+          
+                    <div class="card-body p-4 p-lg-2 text-center">
+                      <p class="card-title fw-medium mb-4">Follow me on linkedin for more information!</p>
+                      <a href="https://www.linkedin.com/in/muhammad-huzaifa-ba3160283/" target="_blank" class="fw-medium fs-7 text-decoration-none link-cover">Read more &rarr;</a>
                     </div>
+                  </div>
                 </div>
-        
-                <a href="#" class="btn btn-white mx-auto mt-7 d-table fw-medium w-100 w-md-auto">More articles &rarr;</a>
+              </div>
+          
+              <a href="" class="btn btn-white mx-auto mt-7 d-table fw-medium w-100 w-md-auto">More articles &rarr;</a>
             </div>
-        </div>
+          </div>
+          
         
         <!-- / Latest Blog Posts-->
 
-        <!-- Product Features summary-->
-        <div class="py-10">
-            <div class="container">
-                <h4 class="fs-1 fw-bold mb-3 text-center">Explore our features</h4>
-                <p class="text-muted text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <div class="row gx-10 gy-7 mt-4">
-
-                    <!-- Feature-->
-                    <div class="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-start">
-                        <span class="f-w-8 d-block text-primary">
-                            <svg class='w-100' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='12 2 2 7 12 12 22 7 12 2'></polygon><polyline points='2 17 12 22 22 17'></polyline><polyline opacity='.4' points='2 12 12 17 22 12'></polyline></svg>
-                        </span>
-                        <p class="fw-medium mb-1 mt-3 fs-5">Tasks planner</p>
-                        <span class="text-muted fs-7">Plan and schedule your weekly tasks on web or mobile through our desktop or mobile apps.</span>
-                    </div>
-                    <!-- / Feature-->
-                    <!-- Feature-->
-                    <div class="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-start">
-                        <span class="f-w-8 d-block text-primary">
-                            <svg class='w-100' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='4' y='4' width='16' height='16' rx='2' ry='2'></rect><rect opacity='.3' x='9' y='9' width='6' height='6'></rect><line x1='9' y1='1' x2='9' y2='4'></line><line x1='15' y1='1' x2='15' y2='4'></line><line x1='9' y1='20' x2='9' y2='23'></line><line x1='15' y1='20' x2='15' y2='23'></line><line x1='20' y1='9' x2='23' y2='9'></line><line x1='20' y1='14' x2='23' y2='14'></line><line x1='1' y1='9' x2='4' y2='9'></line><line x1='1' y1='14' x2='4' y2='14'></line></svg>
-                        </span>
-                        <p class="fw-medium mb-1 mt-3 fs-5">Team collaborations</p>
-                        <span class="text-muted fs-7">Invite unlimited team members to view, edit, comment and create landing pages with you.</span>
-                    </div>
-                    <!-- / Feature-->
-                    <!-- Feature-->
-                    <div class="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-start">
-                        <span class="f-w-8 d-block text-primary">
-                            <svg class='w-100' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='18' cy='18' r='3'></circle><circle cx='6' cy='6' r='3'></circle><path opacity='.4' d='M13 6h3a2 2 0 0 1 2 2v7'></path><line opacity='.4' x1='6' y1='9' x2='6' y2='21'></line></svg>
-                        </span>
-                        <p class="fw-medium mb-1 mt-3 fs-5">Version control</p>
-                        <span class="text-muted fs-7">Full integration with Git, GitLab and Bitbucket to easily allow version control.</span>
-                    </div>
-                    <!-- / Feature-->
-                    <!-- Feature-->
-                    <div class="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-start">
-                        <span class="f-w-8 d-block text-primary">
-                            <svg class='w-100' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' ><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path opacity='.4' d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path opacity='.4' d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg>
-                        </span>
-                        <p class="fw-medium mb-1 mt-3 fs-5">AB testing</p>
-                        <span class="text-muted fs-7">Create unlimited AB tests for your landing pages and make the designs public or private.</span>
-                    </div>
-                    <!-- / Feature-->
-                    <!-- Feature-->
-                    <div class="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-start">
-                        <span class="f-w-8 d-block text-primary">
-                            <svg class='w-100' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' ><path d='M19 16.9A5 5 0 0 0 18 7h-1.26a8 8 0 1 0-11.62 9'></path><polyline opacity='.4' points='13 11 9 17 15 17 11 23'></polyline></svg>
-                        </span>
-                        <p class="fw-medium mb-1 mt-3 fs-5">One-click export</p>
-                        <span class="text-muted fs-7">Export your completed landing pages to HTML in both Bootstrap and Tailwind CSS format.</span>
-                    </div>
-                    <!-- / Feature-->
-                    <!-- Feature-->
-                    <div class="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-start">
-                        <span class="f-w-8 d-block text-primary">
-                            <svg class='w-100' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' ><circle opacity='.4' cx='12' cy='12' r='2'></circle><path d='M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14'></path></svg>
-                        </span>
-                        <p class="fw-medium mb-1 mt-3 fs-5">Mobile application</p>
-                        <span class="text-muted fs-7">Download our mobile app and continue to work on your landing pages through the mobile app.</span>
-                    </div>
-                    <!-- / Feature-->
-
-                </div>
-
-                <a href="#" class="btn btn-primary d-table mx-auto mt-5 w-100 w-md-auto mt-lg-8 mb-3" role="button">Start your trial</a>
-                <ul
-                    class="list-unstyled d-none d-md-flex align-items-center justify-content-center small text-muted mt-3 pt-1 fw-medium fs-9">
-                    <li class="me-4 d-flex align-items-center"><i
-                            class="ri-checkbox-circle-fill text-primary ri-lg me-1"></i> No credit card required
-                    </li>
-                    <li class="me-4 d-flex align-items-center"><i
-                            class="ri-checkbox-circle-fill text-primary ri-lg me-1"></i> Cancel anytime</li>
-                    <li class="me-4 d-flex align-items-center"><i
-                            class="ri-checkbox-circle-fill text-primary ri-lg me-1"></i> 30 day free trial</li>
-                </ul>
-            </div>
-        </div>
-        <!-- Product Features summary-->
-
-        <!-- About Us-->
-        <div class="pt-10 bg-light">
-            <div class="container">
-                <div class="col-12 mx-auto col-sm-10 col-md-8 col-lg-6 text-center">
-                    <h4 class="fs-1 fw-bold mb-4">Who we are</h4>
-
-                    <!-- Stats-->
-                    <div class="my-5 d-none d-md-flex align-items-start justify-content-between">
-                        <div>
-                            <span class="display-3 fw-bold text-primary d-block">12</span>
-                            <span
-                                class="d-block fs-9 fw-bolder tracking-wide text-uppercase text-muted">Locations</span>
-                        </div>
-                        <div>
-                            <span class="display-3 fw-bold text-primary d-block">75K</span>
-                            <span
-                                class="d-block fs-9 fw-bolder tracking-wide text-uppercase text-muted">Customers</span>
-                        </div>
-                        <div>
-                            <span class="display-3 fw-bold text-primary d-block">160</span>
-                            <span class="d-block fs-9 fw-bolder tracking-wide text-uppercase text-muted">Staff</span>
-                        </div>
-                    </div>                    <!-- / Stats-->
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">Sed lobortis nibh augue</a>,
-                        ut blandit <a href="#">lorem hendrerit non</a>. Donec finibus at lacus in efficitur nunc
-                        fringilla, dui quis
-                        vestibulum varius.</p>
-                    <a href="#" class="btn btn-success mt-4">Find out more</a>
-                </div>
-            </div>
-
-            <div class="position-relative mt-10">
-                <picture class="d-table mx-auto mt-5 col-12 col-sm-10 position-relative z-index-20">
-                    <img class="img-fluid d-table mx-auto" src="./assets/images/team-photo.png"
-                        alt="HTML Bootstrap Template by Pixel Rocket">
-                </picture>
-                <!-- SVG shapes-->
-                <div class="position-absolute top-0 end-0 start-0 bottom-0 z-index-0 d-none d-lg-block">
-                    <div class="d-block f-w-6 position-absolute top-n13 end-50">
-                        <span class="d-block">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55.95 50.74"><path class="text-secondary" d="M55.45,34.33A15.92,15.92,0,1,1,39.54,18.41,15.91,15.91,0,0,1,55.45,34.33Z" fill="none" stroke="currentColor" stroke-miterlimit="10"/><path class="text-body" d="M34.33,18.41A15.92,15.92,0,1,1,18.41,2.5,15.92,15.92,0,0,1,34.33,18.41Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/></svg>                        </span>
-                    </div>
-
-                    <div class="d-block f-w-6  position-absolute bottom-15 end-3 rotate-n45 origin-center">
-                        <span class="d-block">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37.51 89.72"><path class="text-body" d="M14.75,46.11C14.75,53,2.5,51.83,2.5,60.64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/><path class="text-body" d="M14.75,17C14.75,24,2.5,22.75,2.5,31.57" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/><path class="text-body" d="M14.75,46.11c0-6.91-12.25-5.72-12.25-14.54" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/><path class="text-body" d="M14.75,17C14.75,10.13,2.5,11.32,2.5,2.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/><path class="text-secondary" d="M37,75.18c0,6.91-12.25,5.72-12.25,14.54" fill="none" stroke="currentColor" stroke-miterlimit="10"/><path class="text-secondary" d="M37,46.11C37,53,24.76,51.83,24.76,60.64" fill="none" stroke="currentColor" stroke-miterlimit="10"/><path class="text-secondary" d="M37,75.18c0-6.91-12.25-5.72-12.25-14.54" fill="none" stroke="currentColor" stroke-miterlimit="10"/><path class="text-secondary" d="M37,46.11c0-6.91-12.25-5.72-12.25-14.54" fill="none" stroke="currentColor" stroke-miterlimit="10"/></svg>                        </span>
-                    </div>
-
-                    <div class="d-block f-w-4  position-absolute bottom-50 start-3">
-                        <span class="d-block">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.25 20.25"><line class="text-body" x1="17.75" y1="17.28" x2="2.5" y2="2.97" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/><line class="text-body" x1="2.97" y1="17.75" x2="17.28" y2="2.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/></svg>                        </span>
-                    </div>
-
-                    <div class="d-block f-w-6  position-absolute top-n3 start-30">
-                        <span class="d-block">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.66 58.68"><polygon class="text-body" points="20.69 33.95 38.85 23.45 20.68 12.98 2.5 2.5 2.52 23.47 2.53 44.45 20.69 33.95" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/><polygon class="text-secondary" points="43.5 47.31 61.66 36.81 43.49 26.34 25.32 15.86 25.33 36.83 25.34 57.81 43.5 47.31" fill="none" stroke="currentColor" stroke-miterlimit="10"/></svg>                        </span>
-                    </div>
-
-                    <div class="d-block f-w-6  position-absolute top-20 end-5">
-                        <span class="d-block">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.47 48.01"><rect  class="text-body" x="2.5" y="2.5" width="31.65" height="31.65" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/><rect class="text-secondary" x="25.32" y="15.86" width="31.65" height="31.65" fill="none" stroke="currentColor" stroke-miterlimit="10"/></svg>                        </span>
-                    </div>
-
-                    <div class="d-block f-w-6  position-absolute top-n13 end-25">
-                        <span class="d-block">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.23 48.04"><path class="text-body" d="M18.41,34.18a15.84,15.84,0,1,1,0-31.68" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/><path class="text-secondary" d="M41.23,47.54a15.84,15.84,0,1,1,0-31.68" fill="none" stroke="currentColor" stroke-miterlimit="10"/></svg>                        </span>
-                    </div>
-
-                    <div class="d-block f-w-4 position-absolute top-n13 start-20">
-                        <span class="d-block">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.53 17.53"><path class="text-body" d="M12.11,14.07a6.27,6.27,0,1,1,2-8.64A6.28,6.28,0,0,1,12.11,14.07Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/></svg>                        </span>
-                    </div>
+       
                 </div>
                 <!-- / SVG shapes-->
             </div>
@@ -925,15 +843,16 @@
 
     <!-- Footer -->
     <!-- Footer-->
+    <section id="contact">  
     <footer class="bg-dark pt-10 pb-8  ">
     
         <div class="container">
             <!-- Free trial -->
             <div class="border-bottom border-white-10 pb-7">
                 <div class="col-12 col-md-8 col-lg-6 d-flex mx-auto flex-column align-items-center justify-content-center">
-                    <h2 class="fs-1 fw-bolder text-white text-center">Try Sigma for free for 30 days with unlimited
-                        features.</h2>
-                    <a href="#" class="btn btn-primary mt-3 w-100 w-md-auto" role="button">Start free trial</a>
+                    <h2 class="fs-1 fw-bolder text-white text-center">Reach out to me!
+                        </h2>
+                    <a href="#" class="btn btn-primary mt-3 w-100 w-md-auto" role="button">Contact me</a>
                 </div>
             </div>
             <!-- Free trial-->
@@ -949,138 +868,60 @@
                     href="#">
                     <!-- Logo SVG Icon-->
                     <span class="f-w-7 d-block text-success me-2">
-                        <svg class="w-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 246.46 258.91"><path d="M145.61,187.72,22.41,116.58,0,129.52l50.45,29.13L0,187.77l22.41,12.94s90.75,52.38,100.82,58.2l123.23-71.13L44.7,71.2l78.54-45.34,78.4,45.26-28,16.2-50.31-29L100.85,71.2l123.21,71.13,22.4-12.94L196,100.25q25.25-14.55,50.46-29.12L123.23,0,0,71.13,201.77,187.71l-78.52,45.41L44.8,187.78l28.06-16.19,50.34,29.07Z" fill="currentColor" fill-rule="evenodd"/></svg>
+                       
                     </span>
                     <!--/ Logo SVG Icon -->
-                    <span class="fw-bold">Sigma</span>
+                    <span class="fw-bold">Huzaifa Ramzan</span>
+                    
                 </a>
+                
                 <!-- /Footer Logo-->
     
     
                 <!-- Footer socials-->
                 <ul class="list-unstyled d-flex align-items-center justify-content-end">
-                    <li class="ms-5"><a href="#" class="text-white text-decoration-none opacity-50-hover transition-opacity"><i class="ri-facebook-circle-line ri-lg"></i></a></li>
-                    <li class="ms-5"><a href="#" class="text-white text-decoration-none opacity-50-hover transition-opacity"><i class="ri-twitter-line ri-lg"></i></a></li>
-                    <li class="ms-5"><a href="#" class="text-white text-decoration-none opacity-50-hover transition-opacity"><i class="ri-instagram-line ri-lg"></i></a></li>
-                    <li class="ms-5"><a href="#" class="text-white text-decoration-none opacity-50-hover transition-opacity"><i class="ri-snapchat-line ri-lg"></i></a></li>
+                    <li class="ms-5"><a href="https://github.com/huzaifaramzan1" target="_blank" class="text-white text-decoration-none opacity-50-hover transition-opacity"><i class="fa-brands fa-github"></i></a></li>
+                    <li class="ms-5"><a href="https://www.linkedin.com/in/muhammad-huzaifa-ba3160283/" target="_blank" class="text-white text-decoration-none opacity-50-hover transition-opacity"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li class="ms-5"><a href="muhammadhuzaifaramzan1@gmail.com" target="_blank" class="text-white text-decoration-none opacity-50-hover transition-opacity"><i class="fa-solid fa-envelope"></i></a></li>
+                   
                 </ul>
                 <!-- Footer socials-->
             </div>
+            <span class="text-white"><br>📍    Lahore, Pakistan</span>
+            <span class="text-white"><br> <br>☎️    +923160420967</span>
+            <span class="text-white"><br> <br>📧    muhammadhuzaifaramzan1@gmail.com</span>
     
             <div class="d-flex flex-wrap justify-content-between mt-5 mt-lg-7">
     
                 <!-- Menu-->
-                <div class="w-100 w-sm-50 w-lg-auto mb-4 mb-lg-0">
-                    <h6 class="text-uppercase fs-xs fw-bolder tracking-wider text-white opacity-50">Product</h6>
-                    <ul class="list-unstyled footer-nav">
-                        <li><a href="#">Page builder <span class="badge bg-danger rounded ms-2 align-middle">new</span></a></li>
-                        <li><a href="#">AI generator</a></li>
-                        <li><a href="#">Landing page templates</a></li>
-                        <li><a href="#">Sketch plugin</a></li>
-                        <li><a href="#">Figma addon <span class="badge bg-primary rounded ms-2 align-middle">beta</span></a></li>
-                        <li><a href="#">XD integration</a></li>
-                    </ul>
-                </div>
-                <!-- /Menu-->
-    
-                <!-- Menu-->
-                <div class="w-100 w-sm-50 w-lg-auto mb-4 mb-lg-0">
-                    <h6 class="text-uppercase fs-xs fw-bolder tracking-wider text-white opacity-50">Company</h6>
-                    <ul class="list-unstyled footer-nav">
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Our core values</a></li>
-                        <li><a href="#">Join our team</a></li>
-                        <li><a href="#">Our blog</a></li>
-                        <li><a href="#">Latest news</a></li>
-                        <li><a href="#">Share price</a></li>
-                    </ul>
-                </div>
-                <!-- /Menu-->
-    
-                <!-- Menu-->
-                <div class="w-100 w-sm-50 w-lg-auto mb-4 mb-lg-0">
-                    <h6 class="text-uppercase fs-xs fw-bolder tracking-wider text-white opacity-50">Navigation</h6>
-                    <ul class="list-unstyled footer-nav">
-                        <li><a href="#">Start free trial</a></li>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Register</a></li>
-                        <li><a href="#">Help & support</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Forgotten password</a></li>
-                    </ul>
-                </div>
-                <!-- /Menu-->
-    
-                <!-- Menu-->
-                <div class="w-100 w-sm-50 w-lg-auto mb-4 mb-lg-0">
-                    <h6 class="text-uppercase fs-xs fw-bolder tracking-wider text-white opacity-50">Legals</h6>
-                    <ul class="list-unstyled footer-nav">
-                        <li><a href="#">Privacy policy</a></li>
-                        <li><a href="#">Terms & conditions</a></li>
-                        <li><a href="#">Cookie policy</a></li>
-                        <li><a href="#">Refund policy</a></li>
-                        <li><a href="#">GDPR information</a></li>
-                        <li><a href="#">Company legals</a></li>
-                    </ul>
-                </div>
+                
                 <!-- /Menu-->
     
             </div>
         </div>
+    </section>
         <!-- Footer Menus-->
     
         <!-- Footer bottom-->
-        <div class="container">
-            <div class="border-top pt-6 mt-7 border-white-10 d-flex flex-column flex-md-row justify-content-between align-items-center">
-                <span class="small text-white opacity-50 mb-2 mb-md-0">All rights reserved &copy Sigma 2021</span>
-                <span class="small text-white opacity-50">Terms of service  |  Security policy</span>
-            </div>
-        </div>
-        <!-- Footer bottom-->
-    
-    </footer>
-    <!-- / Footer-->
-    
-    <!-- Additional imports (modals, offcanvas)-->
-    <!-- Modal Imports-->
-    <!-- Video Modal Iframe-->
-    <!-- Start Video Modal-->
-    <div class="modal fade modal-video"
-        id="videoIframeModal"
-        tabindex="-1"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <!-- Modal Content-->
-                <div class="modal-body p-0">
-                    <button type="button"
-                    class="btn btn-link text-decoration-none text-white opacity-75-hover transition-all position-absolute end-0 top-0 z-index-20"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"><i class="ri-close-fill"></i></button>
-    
-                    <!-- Plyr HTML-->
-                    <div id="player" class="modal-video-player plyr__video-embed">
-                        <iframe
-                        src=""
-                        allowfullscreen
-                        allowtransparency
-                        allow="autoplay"
-                      ></iframe>
-                    </div>
-                    <!--/ Plyr HTML-->
-                </div>
-                <!-- / Modal Content-->
-            </div>
-        </div>
-    </div>
-    <!--/ Video Modal --><!-- / Additional imports-->    <!-- / Footer-->
-
+       
     <!-- Theme JS -->
     <!-- Vendor JS -->
     <script src="./assets/js/vendor.bundle.js"></script>
     
     <!-- Theme JS -->
     <script src="./assets/js/theme.bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="script.js"></script>
+<script>$(window).on('load', function () {
+    // Hide preloader and stop animations
+    $('#preloader').fadeOut(300, function() {
+        $('.circle, h1').css('animation', 'none');
+    });
+
+    // Enable scrolling
+    $('body').css('overflow', 'auto');
+});
+</script>
 </body>
 
 </html>
